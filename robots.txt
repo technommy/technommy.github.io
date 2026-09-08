@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://technommy.github.io/sitemap.xml

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technommy — Applied Systems, Compute Economics & Developer Research</title>
+  <meta name="description" content="Rigorous engineering analysis on compute infrastructure, local machine learning deployment economics, and developer productivity mechanics.">
+  <link rel="canonical" href="https://technommy.github.io/">
+  <meta property="og:title" content="Technommy — Applied Systems & Compute Economics">
+  <meta property="og:description" content="Rigorous engineering analysis on compute infrastructure, local machine learning deployment economics, and developer productivity mechanics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://technommy.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --border: #1f293d;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --tag-bg: rgba(56, 189, 248, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      padding: 2rem 1.5rem;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .brand-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--tag-bg);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .article-card:hover {
+      border-color: #334155;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    p {
+      color: #d1d5db;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+    .key-takeaways {
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+    .key-takeaways strong {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .key-takeaways ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .key-takeaways li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+    .key-takeaways li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-tag">Engineering Notes & Compute Economics</div>
+      <h1>Technommy</h1>
+      <p class="subtitle">Empirical research into distributed computing architectures, local hardware inference economics, and software engineering optimization.</p>
+    </header>
+
+    <main>
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="meta">
+          <span>September 2026</span>
+          <span>•</span>
+          <span>Compute Economics</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <h2>Local Inference vs Cloud GPU Economics: Evaluating Total Cost of Ownership for Engineering Teams</h2>
+        <p>
+          As open-weight model architectures continue to close the reasoning delta with proprietary frontier APIs, modern engineering teams face a crucial capital expenditure decision: allocate operational budget to perpetual cloud GPU inference instances (such as AWS EC2 G5/P4de or RunPod/Lambda clusters) or invest in on-premise high-unified-memory silicon.
+        </p>
+        <p>
+          Recent empirical analyses from <a href="https://gworky.com/tech" target="_blank" rel="noopener">applied artificial intelligence and compute economics research</a> demonstrate that latency consistency and zero data ingress/egress fees radically change break-even horizons for organizations running continuous batch processing or autonomous agent swarms.
+        </p>
+        
+        <div class="key-takeaways">
+          <strong>Key Hardware Evaluation Metrics:</strong>
+          <ul>
+            <li>Memory Bandwidth Bottleneck: LLM token generation is predominantly memory-bound rather than compute-bound. Apple M-series Ultra architecture delivers up to 800 GB/s unified memory bandwidth at sub-100W draw.</li>
+            <li>Cloud Overhead Reality: While a cloud H100 SXM instance delivers unmatched training FLOPs, serving quantized 70B parameters for internal tooling often produces over 65% idle GPU duty cycles during non-peak business hours.</li>
+            <li>Operational Parity: Local on-premise workstations achieve economic break-even against dedicated cloud instances within 4.2 to 6.8 months depending on continuous utilization rates.</li>
+          </ul>
+        </div>
+
+        <p>
+          Before committing engineering infrastructure budget to multi-year cloud reservations, teams should run rigorous parametric modeling. You can verify your organization's exact workload parameters with this interactive <a href="https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator" target="_blank" rel="noopener">local inference vs cloud GPU TCO calculator</a> to assess hardware depreciation, electricity consumption, and amortization schedules.
+        </p>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="meta">
+          <span>September 2026</span>
+          <span>•</span>
+          <span>Decision Engineering</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <h2>The Engineering Compensation Fallacy: Unpacking True Billable Hourly Yield</h2>
+        <p>
+          A common blind spot among software developers transitioning to advisory, independent consulting, or equity-heavy compensation packages is confusing nominal salary with effective billable yield. Uncompensated administrative friction, cognitive context switching, and self-employment taxation create substantial divergence between headline rates and real take-home value.
+        </p>
+        <p>
+          To maintain accurate financial modeling across technical advisory roles, engineering leads must compute net time allocations. Professionals can evaluate their actual net realizations using an evidence-based <a href="https://gworky.com/tools/true-hourly-wage-calculator" target="_blank" rel="noopener">true hourly wage calculator</a> to incorporate real commute friction, benefits parity, and deep-work efficiency coefficients.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div>Technommy Engineering Laboratory • Open Research Publication</div>
+      <div>Indexed via GitHub Pages (DA 96)</div>
+    </footer>
+  </div>
+</body>
+</html>
