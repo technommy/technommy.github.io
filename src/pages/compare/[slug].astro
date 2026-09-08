@@ -18,12 +18,75 @@ const cld = scenario.cloud_instance;
 const related = matrixData
   .filter((s) => s.slug !== scenario.slug && (s.local_hardware.id === loc.id || s.cloud_instance.provider === cld.provider))
   .slice(0, 3);
+
+// Generate structured FAQPage & BreadcrumbList schemas for Google Rich Results
+const siteUrl = "https://technommy.github.io";
+const pageUrl = `${siteUrl}/compare/${scenario.slug}/`;
+
+const customSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Compare Matrix",
+        "item": `${siteUrl}/compare/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": scenario.title,
+        "item": pageUrl
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `What is the break-even timeline between ${loc.name} and ${cld.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${loc.name} achieves break-even against ${cld.name} in approximately ${scenario.breakeven_months} months under a standard 160-hour monthly engineering duty cycle. Over a 12-month horizon, net economic savings are projected at $${scenario.one_year_net_savings.toLocaleString()}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How does memory capacity compare between ${loc.name} and ${cld.name} for local inference?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${loc.name} provides ${loc.vram_gb} GB of ${loc.category === 'Apple Silicon' ? 'unified system memory with ' + loc.bandwidth_gb_s + ' GB/s bandwidth' : 'dedicated VRAM'}, compared to ${cld.vram_gb} GB on the cloud ${cld.name} instance. This allows running quantized weights up to ${scenario.max_quantized_model}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What are the electricity and thermal costs of running ${loc.name} on-premises?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${loc.name} operates at a peak thermal design power of ${loc.power_watts} Watts. Under a standard 160-hour engineering workload at the US average rate of $0.16/kWh, operational energy costs remain under $${Math.round((loc.power_watts * 160 * 0.16) / 1000) + 1} per month.`
+        }
+      }
+    ]
+  }
+];
 ---
 
 <BaseLayout 
   title={`${scenario.title} | Technommy Compute Economics`}
   description={`Comprehensive parametric break-even analysis between ${loc.name} and ${cld.name}. Amortization schedules, memory bandwidth benchmarks, and electricity calculations.`}
   ogType="article"
+  canonical={pageUrl}
+  customSchema={customSchema}
 >
   <div class="breadcrumbs">
     <a href="/">Home</a> <span>/</span> <a href="/compare/">Compare Matrix</a> <span>/</span> <span>{loc.id} vs {cld.id}</span>

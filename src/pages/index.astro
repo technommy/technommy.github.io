@@ -6,6 +6,7 @@ import GroundworkCTA from '../components/GroundworkCTA.astro';
 
 import digestData from '../data/daily_digest.json';
 import matrixData from '../data/compute_matrix.json';
+import archiveManifest from '../data/archive_manifest.json';
 
 // Get top 6 featured comparison scenarios
 const featuredScenarios = matrixData.slice(0, 6);
@@ -41,6 +42,19 @@ const featuredScenarios = matrixData.slice(0, 6);
         <DigestCard {...item} />
       ))}
     </div>
+
+    {archiveManifest && archiveManifest.length > 0 && (
+      <div class="archive-rail">
+        <span class="archive-label">Historical Editions:</span>
+        <div class="archive-tags">
+          {archiveManifest.map((dateStr) => (
+            <a href={`/digest/${dateStr}/`} class="archive-tag">
+              📅 {dateStr}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </section>
 
   <!-- Interactive Utility Banner -->
@@ -165,6 +179,39 @@ const featuredScenarios = matrixData.slice(0, 6);
     border-radius: 50%;
     background: var(--green);
     box-shadow: 0 0 8px var(--green);
+  }
+  .archive-rail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .archive-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .archive-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .archive-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+  }
+  .archive-tag:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
   }
   .view-all-link {
     font-size: 0.95rem;

@@ -7,14 +7,17 @@ interface Props {
   category: string;
   published_at: string;
   domain: string;
+  signal_score?: number;
 }
 
-const { title, link, summary, source, category, published_at, domain } = Astro.props;
+const { title, link, summary, source, category, published_at, domain, signal_score = 3 } = Astro.props;
+const stars = "★".repeat(signal_score) + "☆".repeat(5 - signal_score);
 ---
 
 <article class="digest-card">
   <div class="card-meta">
     <span class="source-tag">{source}</span>
+    <span class="signal-tag" title={`Signal Score: ${signal_score}/5`}>{stars}</span>
     <span class="category-tag">{category}</span>
     <span class="date">{published_at}</span>
   </div>
@@ -60,6 +63,12 @@ const { title, link, summary, source, category, published_at, domain } = Astro.p
     background: var(--accent-glow);
     padding: 0.15rem 0.5rem;
     border-radius: 4px;
+  }
+  .signal-tag {
+    color: #fbbf24;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
   }
   .category-tag {
     color: var(--text-sub);

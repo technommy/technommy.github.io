@@ -2,7 +2,7 @@ name: Daily Research Digest Sync
 
 on:
   schedule:
-    # Runs everyday at 06:00 UTC (13:00 WIB)
+    # Runs everyday at 06:00 UTC
     - cron: "0 6 * * *"
   workflow_dispatch:
 
@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name "Technommy Digest Bot"
           git config user.email "bot@technommy.github.io"
-          git add src/data/daily_digest.json
-          git commit -m "chore(digest): sync daily research feeds [skip ci]" || echo "No changes to commit"
+          git add src/data/
+          git commit -m "chore(digest): sync daily research feeds and permanent archives" || echo "No changes to commit"
           git push
