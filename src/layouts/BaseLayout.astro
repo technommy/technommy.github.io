@@ -27,16 +27,30 @@ const defaultOgImage = `${siteUrl}/technommy-og.png`;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
+  <meta name="author" content="Technommy Engineering Laboratory" />
+  <meta name="publisher" content="Technommy" />
+  <meta name="keywords" content="compute economics, local llm inference, apple silicon vram, rtx 4090 vs mac studio, cloud gpu tco, unified memory bandwidth, mac studio m2 ultra, h100 cloud pricing, runpod benchmarks" />
+
+  <!-- PWA & Mobile Icons -->
+  <meta name="theme-color" content="#0b0f19" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   
   {/* Strict Canonical Hygiene: Never advertise canonical on noindex */}
   {!noindex && <link rel="canonical" href={canonical} />}
   {noindex && <meta name="robots" content="noindex, nofollow" />}
+  {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
 
   <!-- OpenGraph -->
   <meta property="og:title" content={fullTitle} />
@@ -44,17 +58,24 @@ const defaultOgImage = `${siteUrl}/technommy-og.png`;
   <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="Technommy" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content={defaultOgImage} />
+  <meta property="og:image:secure_url" content={defaultOgImage} />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Technommy Engineering Laboratory — Compute Economics & Hardware Benchmarks" />
   {publishedTime && <meta property="article:published_time" content={publishedTime} />}
   {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@groundworkpub" />
+  <meta name="twitter:creator" content="@groundworkpub" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={defaultOgImage} />
+  <meta name="twitter:image:alt" content="Technommy Engineering Laboratory — Compute Economics & Hardware Benchmarks" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,15 +85,34 @@ const defaultOgImage = `${siteUrl}/technommy-og.png`;
   <!-- Global Structured Data JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Technommy",
-    "url": siteUrl,
-    "description": description,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Technommy Engineering Laboratory",
-      "url": siteUrl
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        "name": "Technommy Engineering Laboratory",
+        "url": siteUrl,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${siteUrl}/apple-touch-icon.png`,
+          "width": 180,
+          "height": 180
+        },
+        "sameAs": [
+          "https://github.com/technommy/technommy.github.io",
+          "https://gworky.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "name": "Technommy",
+        "url": siteUrl,
+        "description": description,
+        "publisher": {
+          "@id": `${siteUrl}/#organization`
+        }
+      }
+    ]
   })} />
 
   {/* Page-Specific JSON-LD Schemas */}

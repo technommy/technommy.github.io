@@ -1,5 +1,31 @@
+# Robots.txt for Technommy Engineering Laboratory (https://technommy.github.io)
 User-agent: *
 Allow: /
 
-Sitemap: https://technommy.github.io/sitemap-index.xml
-Sitemap: https://technommy.github.io/sitemap-0.xml
+# Explicit AI and Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Authoritative XML Sitemap
+Sitemap: https://technommy.github.io/sitemap.xml

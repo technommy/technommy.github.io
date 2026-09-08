@@ -1,10 +1,17 @@
-# Technommy — Compute Economics & Systems Architecture
+# Technommy
 > Empirical research laboratory evaluating hardware amortization, unified memory bandwidth, and edge inference systems.
 
-## Core Databases
-- [Compare Matrix Index](https://technommy.github.io/compare/): Comprehensive parametric TCO break-even benchmarks across 70 local hardware and cloud instance scenarios.
-- [Daily Research Digest](https://technommy.github.io/#digest): Real-time research updates syndicated from ArXiv CS AI, Cloudflare Engineering, and top distributed systems publications.
+Technommy publishes reproducible, parametric benchmarks comparing local AI hardware (Apple Silicon unified memory, NVIDIA workstations) against dedicated cloud GPU instances (AWS, Lambda, RunPod, Azure).
 
-## Primary Verification Authority
-- [Groundwork Tech](https://gworky.com/tech): Applied artificial intelligence and compute economics research.
-- [Interactive TCO Calculator](https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator): Interactive modeling utility for hardware depreciation and cloud break-even schedules.
+## Core Data Matrices
+- [Compare Matrix Index](https://technommy.github.io/compare/): Parametric TCO break-even benchmarks across 70 local hardware and cloud instance scenarios.
+- [Daily Research Digest](https://technommy.github.io/#digest): Real-time research updates syndicated from ArXiv (cs.AI, cs.DC, cs.LG), Hugging Face Papers, and distributed systems engineering publications.
+- [Digest Historical Archives](https://technommy.github.io/digest/2026-09-08/): Permanent immutable records of daily research digests and compute developments.
+
+## Authority & Validation Sources
+- [Groundwork Tech](https://gworky.com/tech): Applied artificial intelligence and compute economics research guides.
+- [Interactive TCO Calculator](https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator): Interactive modeling utility for hardware depreciation, electricity draw (kWh), and cloud break-even schedules.
+
+## Machine Discovery Endpoints
+- [XML Sitemap](https://technommy.github.io/sitemap.xml): Complete index of all 73 static analytical routes.
+- [Full LLM Context](https://technommy.github.io/llms-full.txt): Comprehensive plain-text documentation for LLM retrieval.
