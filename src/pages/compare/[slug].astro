@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GroundworkCTA from '../../components/GroundworkCTA.astro';
+import matrixData from '../../data/compute_matrix.json';
+
+export async function getStaticPaths() {
+  return matrixData.map((scenario) => ({
+    params: { slug: scenario.slug },
+    props: { scenario },
+  }));
+}
+
+const { scenario } = Astro.props;
+const loc = scenario.local_hardware;
+const cld = scenario.cloud_instance;
+
+// Get 3 related comparisons
+const related = matrixData
+  .filter((s) => s.slug !== scenario.slug && (s.local_hardware.id === loc.id || s.cloud_instance.provider === cld.provider))
+  .slice(0, 3);
+---
+
+<BaseLayout 
+  title={`${scenario.title} | Technommy Compute Economics`}
+  description={`Comprehensive parametric break-even analysis between ${loc.name} and ${cld.name}. Amortization schedules, memory bandwidth benchmarks, and electricity calculations.`}
+  ogType="article"
+>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>/</span> <a href="/compare/">Compare Matrix</a> <span>/</span> <span>{loc.id} vs {cld.id}</span>
+  </div>
+
+  <header class="detail-header">
+    <div class="badge">EMPIRICAL HARDWARE AUDIT</div>
+    <h1>{scenario.title}</h1>
+    <p class="subtitle">
+      Evaluating capital expenditure break-even points, memory bandwidth limitations, and 12-month total cost of ownership (TCO) for modern engineering teams.
+    </p>
+  </header>
+
+  <!-- Quick Verdict Alert Box -->
+  <div class="verdict-box">
+    <div class="verdict-header">
+      <span class="verdict-icon">⚡</span>
+      <h3>Executive Economic Verdict</h3>
+    </div>
+    <p class="verdict-text">{scenario.verdict}</p>
+    <div class="verdict-stats">
+      <div class="vstat">
+        <span class="vlabel">1-Year Net Delta</span>
+        <span class="vval">${scenario.one_year_net_savings > 0 ? `+${scenario.one_year_net_savings.toLocaleString()} Net Savings` : `-$${Math.abs(scenario.one_year_net_savings).toLocaleString()}`}</span>
+      </div>
+      <div class="vstat">
+        <span class="vlabel">Local Hardware Outlay</span>
+        <span class="vval">${loc.purchase_price.toLocaleString()}</span>
+      </div>
+      <div class="vstat">
+        <span class="vlabel">Cloud Operational Rate</span>
+        <span class="vval">${cld.hourly_rate}/hr</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side-by-Side Parametric Specifications -->
+  <section class="section-block">
+    <h2>1. Technical & Financial Specification Matrix</h2>
+    <div class="table-container">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Local: {loc.name}</th>
+            <th>Cloud: {cld.name}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hardware Architecture</strong></td>
+            <td>{loc.category}</td>
+            <td>Dedicated Cloud GPU ({cld.provider})</td>
+          </tr>
+          <tr>
+            <td><strong>Memory Capacity (VRAM / Unified)</strong></td>
+            <td><span class="highlight-val">{loc.vram_gb} GB</span></td>
+            <td><span class="highlight-val">{cld.vram_gb} GB</span></td>
+          </tr>
+          <tr>
+            <td><strong>Memory Bandwidth</strong></td>
+            <td>{loc.bandwidth_gb_s} GB/s</td>
+            <td>Varies by PCIe / SXM Topology</td>
+          </tr>
+          <tr>
+            <td><strong>Peak Thermal Power Draw</strong></td>
+            <td>{loc.power_watts} Watts</td>
+            <td>Included in hourly hosting rate</td>
+          </tr>
+          <tr>
+            <td><strong>Upfront Capital Cost</strong></td>
+            <td>${loc.purchase_price.toLocaleString()}</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td><strong>Monthly Cost (40 hrs/week workload)</strong></td>
+            <td>${scenario.monthly_elec_cost_40h} <span class="note">(Electricity)</span></td>
+            <td>${scenario.cloud_cost_monthly_40h} <span class="note">(Usage billing)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Monthly Cost (24/7 Continuous Deployment)</strong></td>
+            <td>${scenario.monthly_elec_cost_24_7} <span class="note">(Electricity)</span></td>
+            <td>${scenario.cloud_cost_monthly_24_7} <span class="note">(Usage billing)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Groundwork Interactive Utility Funnel -->
+  <GroundworkCTA />
+
+  <!-- In-Depth Engineering Analysis -->
+  <section class="section-block prose-content">
+    <h2>2. Memory Bandwidth & Token Generation Physics</h2>
+    <p>
+      In large language model deployment, text generation (autoregressive decoding) is predominantly a <em>memory-bandwidth-bound</em> operation rather than a raw compute-bound task. For each token generated, every active parameter of the model must be streamed from memory into the compute cores.
+    </p>
+    <p>
+      According to latest empirical analyses from <a href="https://gworky.com/tech" target="_blank" rel="noopener">applied artificial intelligence and compute economics research</a>, the unified memory architecture of {loc.name} delivers {loc.bandwidth_gb_s} GB/s of continuous throughput directly accessible by both CPU and GPU cores. This eliminates the high latency and PCI Express bottlenecks typically encountered when swapping model weights between host system memory and dedicated VRAM buffers.
+    </p>
+
+    <h2>3. Break-Even Timeline & Operational Cashflow Dynamics</h2>
+    <p>
+      When budgeting for development sandboxes or internal research agents, teams frequently miscalculate cloud expenditure by failing to factor in non-productive idle time. An AWS or Lambda instance provisioned perpetually continues billing at ${cld.hourly_rate} per hour regardless of whether developers are actively invoking endpoints.
+    </p>
+    <p>
+      Under a standard developer schedule (40 active compute hours per week), <strong>{loc.name} amortizes its entire capital acquisition price in {scenario.breakeven_months_40h} months</strong>. Under continuous production batch workflows (24 hours per day, 7 days per week), the break-even horizon shrinks dramatically to just <strong>{scenario.breakeven_months_24_7} months</strong>.
+    </p>
+    <p>
+      To model custom electricity rates or factor in tax depreciation schedules for corporate procurement, engineering leads can run specific scenario simulations using the <a href="https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator" target="_blank" rel="noopener">local inference vs cloud GPU TCO calculator</a>.
+    </p>
+  </section>
+
+  <!-- Related Comparisons -->
+  {related.length > 0 && (
+    <section class="section-block">
+      <h2>Related Hardware & Cloud Scenarios</h2>
+      <div class="related-grid">
+        {related.map((r) => (
+          <a href={`/compare/${r.slug}/`} class="rel-card">
+            <span class="rel-title">{r.local_hardware.name} vs {r.cloud_instance.name}</span>
+            <span class="rel-sub">Break-even: {r.breakeven_months_24_7} mos →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .breadcrumbs a {
+    color: var(--text-muted);
+  }
+  .breadcrumbs a:hover {
+    color: var(--accent);
+  }
+  .detail-header {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+  }
+  .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    font-weight: 600;
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+    max-width: 780px;
+  }
+  .verdict-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-accent);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 3rem;
+  }
+  .verdict-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+  .verdict-icon {
+    font-size: 1.35rem;
+  }
+  .verdict-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .verdict-text {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+  .verdict-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: rgba(11, 15, 25, 0.6);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+  }
+  .vstat {
+    display: flex;
+    flex-direction: column;
+  }
+  .vlabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  .vval {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .section-block {
+    margin-bottom: 3.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  .table-container {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+  }
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .spec-table th, .spec-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-table th {
+    background: rgba(15, 23, 42, 0.7);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .highlight-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+  .prose-content p {
+    color: var(--text-sub);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .prose-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .rel-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+  }
+  .rel-card:hover {
+    border-color: var(--accent);
+  }
+  .rel-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+  }
+  .rel-sub {
+    font-size: 0.8rem;
+    color: var(--green);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  @media (max-width: 768px) {
+    .verdict-stats, .related-grid {
+      grid-template-columns: 1fr;
+    }
+    h1 {
+      font-size: 1.95rem;
+    }
+  }
+</style>

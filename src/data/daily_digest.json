@@ -1,0 +1,96 @@
+{
+  "updated_at": "2026-09-08 18:22 UTC",
+  "count": 10,
+  "items": [
+    {
+      "title": "Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models",
+      "link": "https://blog.cloudflare.com/vulnerability-discovery-remediation/",
+      "summary": "Use production traffic and security signals to prioritize findings, prepare edge mitigations when safe, and propose code patches. By combining WAF data with OpenAI Daybreak models, Vulnerability Discovery and Remediation helps teams identify and patch the most critical threats fi...",
+      "source": "Cloudflare Engineering",
+      "category": "Systems Architecture",
+      "published_at": "Thu, 03 Sep 2026 21:03:02 GMT",
+      "domain": "blog.cloudflare.com"
+    },
+    {
+      "title": "How we could save petabytes of cache storage with Zstandard and Pingora",
+      "link": "https://blog.cloudflare.com/cache-transcoding/",
+      "summary": "Could we get more cache space with the same hardware? We prototyped compression inside Cloudflare's cache to find out.",
+      "source": "Cloudflare Engineering",
+      "category": "Systems Architecture",
+      "published_at": "Tue, 01 Sep 2026 12:59:00 GMT",
+      "domain": "blog.cloudflare.com"
+    },
+    {
+      "title": "Introducing Adaptive Intelligence: Undermining the economics of every bot attack",
+      "link": "https://blog.cloudflare.com/introducing-adaptive-intelligence/",
+      "summary": "Bot operators have historically had the economic advantage, bypassing static, deterministic detection rules with cheap proxies and retooling. Cloudflare's new Adaptive Intelligence engine flips this dynamic by autonomously learning from the meta-signals of live traffic and deploy...",
+      "source": "Cloudflare Engineering",
+      "category": "Systems Architecture",
+      "published_at": "Mon, 31 Aug 2026 12:59:00 GMT",
+      "domain": "blog.cloudflare.com"
+    },
+    {
+      "title": "BotBase for Operators: A clearer path to joining Cloudflare's directory of bots and agents",
+      "link": "https://blog.cloudflare.com/botbase-for-operators/",
+      "summary": "Bot operators now have a home in the Cloudflare dashboard to manage submissions. This update adds submission status tracking, submission editing, and a behavior model so operators can accurately declare how their bots use content.",
+      "source": "Cloudflare Engineering",
+      "category": "Systems Architecture",
+      "published_at": "Fri, 28 Aug 2026 12:59:44 GMT",
+      "domain": "blog.cloudflare.com"
+    },
+    {
+      "title": "How we saved 100 terabytes of memory by optimizing 1.1.1.1\u2019s DNS cache",
+      "link": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
+      "summary": "Five Rust-level memory optimizations to the DNS cache layout of Big Pineapple cut per-entry memory by 56%, freeing approximately 100 TB of memory across Cloudflare's fleet.",
+      "source": "Cloudflare Engineering",
+      "category": "Systems Architecture",
+      "published_at": "Thu, 27 Aug 2026 17:02:35 GMT",
+      "domain": "blog.cloudflare.com"
+    },
+    {
+      "title": "Among European Companies That Use a CDN, Nearly 9 in 10 Use Cloudflare",
+      "link": "https://ciphercue.com/blog/european-cdn-concentration-cloudflare-nine-in-ten",
+      "summary": "Comments",
+      "source": "Hacker News Frontpage",
+      "category": "Industry Discussion",
+      "published_at": "Tue, 08 Sep 2026 08:42:56 +0000",
+      "domain": "ciphercue.com"
+    },
+    {
+      "title": "Antiquated HTML Snippets and Artefacts",
+      "link": "https://vale.rocks/posts/html-relics",
+      "summary": "Comments",
+      "source": "Hacker News Frontpage",
+      "category": "Industry Discussion",
+      "published_at": "Tue, 08 Sep 2026 09:43:14 +0000",
+      "domain": "vale.rocks"
+    },
+    {
+      "title": "Why getting your hands dirty is good for you",
+      "link": "https://www.bbc.com/future/article/20260904-how-getting-your-hands-dirty-boosts-your-health-within-weeks",
+      "summary": "Comments",
+      "source": "Hacker News Frontpage",
+      "category": "Industry Discussion",
+      "published_at": "Tue, 08 Sep 2026 09:48:24 +0000",
+      "domain": "bbc.com"
+    },
+    {
+      "title": "We built our house for LAN parties",
+      "link": "https://lanparty.house/",
+      "summary": "Comments",
+      "source": "Hacker News Frontpage",
+      "category": "Industry Discussion",
+      "published_at": "Sat, 05 Sep 2026 18:44:40 +0000",
+      "domain": "lanparty.house"
+    },
+    {
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+      "link": "https://mcpherrin.ca/2026/09/07/rsa.html",
+      "summary": "Comments",
+      "source": "Hacker News Frontpage",
+      "category": "Industry Discussion",
+      "published_at": "Tue, 08 Sep 2026 01:16:59 +0000",
+      "domain": "mcpherrin.ca"
+    }
+  ]
+}

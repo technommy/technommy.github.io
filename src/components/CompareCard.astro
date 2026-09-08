@@ -1,0 +1,122 @@
+---
+interface Props {
+  scenario: any;
+}
+
+const { scenario } = Astro.props;
+const loc = scenario.local_hardware;
+const cld = scenario.cloud_instance;
+---
+
+<a href={`/compare/${scenario.slug}/`} class="compare-card">
+  <div class="compare-badge">COMPUTE MATRIX</div>
+  <h3 class="compare-title">
+    {loc.name} <span class="vs">vs</span> {cld.name}
+  </h3>
+  <div class="metrics-grid">
+    <div class="metric">
+      <span class="label">Local Hardware</span>
+      <span class="value">${loc.purchase_price.toLocaleString()}</span>
+      <span class="sub">{loc.vram_gb}GB • {loc.bandwidth_gb_s} GB/s</span>
+    </div>
+    <div class="metric">
+      <span class="label">Cloud Instance</span>
+      <span class="value">${cld.hourly_rate}/hr</span>
+      <span class="sub">{cld.vram_gb}GB • {cld.provider}</span>
+    </div>
+    <div class="metric highlight">
+      <span class="label">24/7 Break-even</span>
+      <span class="value highlight-text">{scenario.breakeven_months_24_7} mos</span>
+      <span class="sub">({scenario.breakeven_months_40h} mos at 40h/wk)</span>
+    </div>
+  </div>
+  <div class="card-arrow">View Economic Model & Amortization →</div>
+</a>
+
+<style>
+  .compare-card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    text-decoration: none;
+  }
+  .compare-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .compare-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  .compare-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    line-height: 1.35;
+  }
+  .vs {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin: 0 0.35rem;
+  }
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .metric {
+    display: flex;
+    flex-direction: column;
+  }
+  .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.2rem;
+  }
+  .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .highlight-text {
+    color: var(--green);
+  }
+  .sub {
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    margin-top: 0.15rem;
+  }
+  .card-arrow {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 640px) {
+    .metrics-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+</style>

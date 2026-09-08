@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompareCard from '../../components/CompareCard.astro';
+import GroundworkCTA from '../../components/GroundworkCTA.astro';
+
+import matrixData from '../../data/compute_matrix.json';
+
+const totalScenarios = matrixData.length;
+---
+
+<BaseLayout 
+  title="Hardware Compare Matrix — Local Silicon vs Cloud GPUs | Technommy"
+  description="Comprehensive parametric compute economics comparison between Apple Silicon unified memory, local multi-GPU workstations, and cloud instances."
+>
+  <div class="compare-header">
+    <div class="breadcrumbs">
+      <a href="/">Home</a> <span>/</span> <span>Compare Matrix</span>
+    </div>
+    <h1>Compute Economics Comparison Matrix</h1>
+    <p class="subtitle">
+      Explore all {totalScenarios} parametric scenarios comparing upfront hardware capital expenditures against cloud GPU hourly operational billing across AWS, Lambda Cloud, RunPod, GCP, and Azure.
+    </p>
+  </div>
+
+  <GroundworkCTA />
+
+  <div class="scenarios-list">
+    {matrixData.map((sc) => (
+      <CompareCard scenario={sc} />
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .compare-header {
+    margin-bottom: 2.5rem;
+  }
+  .breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .breadcrumbs a {
+    color: var(--text-muted);
+  }
+  .breadcrumbs a:hover {
+    color: var(--accent);
+  }
+  h1 {
+    font-size: 2.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-sub);
+    max-width: 720px;
+    line-height: 1.6;
+  }
+  .scenarios-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 768px) {
+    .scenarios-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

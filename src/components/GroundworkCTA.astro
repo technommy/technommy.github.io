@@ -1,0 +1,111 @@
+---
+interface Props {
+  toolType?: string;
+}
+
+const { toolType = "gpu" } = Astro.props;
+---
+
+<div class="gw-cta-card">
+  <div class="cta-left">
+    <span class="cta-badge">GROUNDWORK UTILITY</span>
+    <h4>Interactive Compute TCO Modeling</h4>
+    <p>
+      Need customized modeling for your engineering team? Model exact electricity tariffs, token throughput requirements, and hardware amortization with the official <a href="https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator" target="_blank" rel="noopener">local inference vs cloud GPU TCO calculator</a>.
+    </p>
+  </div>
+  <div class="cta-right">
+    <a href="https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator" target="_blank" rel="noopener" class="cta-button">
+      Run Parametric Model ↗
+    </a>
+    <span class="cta-sub">Part of <a href="https://gworky.com/tech" target="_blank" rel="noopener">applied artificial intelligence and compute economics research</a></span>
+  </div>
+</div>
+
+<style>
+  .gw-cta-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .cta-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .cta-left h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+  }
+  .cta-left p {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  .cta-left a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .cta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+  .cta-button {
+    background: var(--accent);
+    color: #0b0f19 !important;
+    font-weight: 700;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .cta-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  .cta-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+  .cta-sub a {
+    color: var(--text-muted);
+    text-decoration: underline;
+  }
+  .cta-sub a:hover {
+    color: var(--accent);
+  }
+  @media (max-width: 768px) {
+    .gw-cta-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .cta-right {
+      align-items: flex-start;
+      width: 100%;
+    }
+    .cta-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

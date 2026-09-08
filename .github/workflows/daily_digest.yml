@@ -1,0 +1,36 @@
+name: Daily Research Digest Sync
+
+on:
+  schedule:
+    # Runs everyday at 06:00 UTC (13:00 WIB)
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install HTTPX
+        run: pip install httpx
+
+      - name: Fetch Fresh Research Feeds
+        run: python scripts/fetch_digest.py
+
+      - name: Commit & Push Fresh Digest
+        run: |
+          git config user.name "Technommy Digest Bot"
+          git config user.email "bot@technommy.github.io"
+          git add src/data/daily_digest.json
+          git commit -m "chore(digest): sync daily research feeds [skip ci]" || echo "No changes to commit"
+          git push

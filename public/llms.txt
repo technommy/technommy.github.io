@@ -1,0 +1,10 @@
+# Technommy — Compute Economics & Systems Architecture
+> Empirical research laboratory evaluating hardware amortization, unified memory bandwidth, and edge inference systems.
+
+## Core Databases
+- [Compare Matrix Index](https://technommy.github.io/compare/): Comprehensive parametric TCO break-even benchmarks across 70 local hardware and cloud instance scenarios.
+- [Daily Research Digest](https://technommy.github.io/#digest): Real-time research updates syndicated from ArXiv CS AI, Cloudflare Engineering, and top distributed systems publications.
+
+## Primary Verification Authority
+- [Groundwork Tech](https://gworky.com/tech): Applied artificial intelligence and compute economics research.
+- [Interactive TCO Calculator](https://gworky.com/tools/mac-studio-vs-cloud-gpu-tco-calculator): Interactive modeling utility for hardware depreciation and cloud break-even schedules.

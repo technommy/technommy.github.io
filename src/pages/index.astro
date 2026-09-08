@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DigestCard from '../components/DigestCard.astro';
+import CompareCard from '../components/CompareCard.astro';
+import GroundworkCTA from '../components/GroundworkCTA.astro';
+
+import digestData from '../data/daily_digest.json';
+import matrixData from '../data/compute_matrix.json';
+
+// Get top 6 featured comparison scenarios
+const featuredScenarios = matrixData.slice(0, 6);
+---
+
+<BaseLayout title="Technommy — Applied Systems, Compute Economics & Developer Research">
+  <section class="hero-section">
+    <div class="hero-badge">OPEN RESEARCH PORTAL</div>
+    <h1 class="hero-title">Empirical Compute Economics & Systems Architecture</h1>
+    <p class="hero-desc">
+      Rigorous engineering research into local AI hardware inference economics, unified memory bandwidth thresholds, and autonomous edge systems.
+    </p>
+    <div class="hero-links">
+      <a href="#digest" class="pill-btn primary">Latest Daily Digest ↓</a>
+      <a href="/compare/" class="pill-btn secondary">Explore 70+ Hardware Comparisons →</a>
+    </div>
+  </section>
+
+  <!-- Section 1: Daily Research Digest -->
+  <section id="digest" class="content-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Daily Research Digest</h2>
+        <p class="section-subtitle">Curated developments across distributed AI systems and compute infrastructure.</p>
+      </div>
+      <div class="sync-status">
+        <span class="pulse-dot"></span> Updated: {digestData.updated_at}
+      </div>
+    </div>
+
+    <div class="digest-list">
+      {digestData.items.map((item) => (
+        <DigestCard {...item} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Interactive Utility Banner -->
+  <GroundworkCTA />
+
+  <!-- Section 2: Programmatic Compute Matrix -->
+  <section class="content-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Featured Compute Economics Matrices</h2>
+        <p class="section-subtitle">Parametric break-even analyses between local hardware and cloud GPU instances.</p>
+      </div>
+      <a href="/compare/" class="view-all-link">View All 70 Comparisons →</a>
+    </div>
+
+    <div class="matrix-grid">
+      {featuredScenarios.map((sc) => (
+        <CompareCard scenario={sc} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 3.5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3.5rem;
+  }
+  .hero-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    max-width: 780px;
+  }
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-sub);
+    max-width: 660px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .hero-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .pill-btn {
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .pill-btn.primary {
+    background: var(--accent);
+    color: #0b0f19;
+  }
+  .pill-btn.primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  .pill-btn.secondary {
+    background: var(--card-bg);
+    color: #ffffff;
+    border: 1px solid var(--border);
+  }
+  .pill-btn.secondary:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .content-section {
+    margin-bottom: 4rem;
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .sync-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+  }
+  .view-all-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 768px) {
+    .matrix-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-title {
+      font-size: 2.1rem;
+    }
+  }
+</style>
