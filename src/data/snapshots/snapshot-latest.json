@@ -1,22 +1,22 @@
 {
-  "date": "2026-09-11",
-  "updated_at": "2026-09-11 06:07 UTC",
+  "date": "2026-09-12",
+  "updated_at": "2026-09-12 09:52 UTC",
   "count": 18,
   "items": [
     {
-      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
-      "link": "https://huggingface.co/papers/2608.27875",
-      "summary": "Quantization has been widely adopted in LLM training and inference to reduce cost and improve efficiency. However, low-bit quantization of the attention module often introduces large errors at very low bit-widths, causing performance degradation. Existing methods mainly rely on s...",
+      "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
+      "link": "https://huggingface.co/papers/2608.15380",
+      "summary": "In systems built on Robot Operating System 2 (ROS 2) and using Data Distribution Service (DDS), a single network-impaired or throttled subscriber on a RELIABLE topic can cause backpressure that degrades throughput and latency for all other subscribers, including safety-critical o...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-08-28",
+      "published_at": "2026-09-06",
       "signal_score": 5
     },
     {
-      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
-      "link": "https://huggingface.co/papers/2609.10712",
-      "summary": "We study how model post-training and test-time inference design affect natural-language proof generation for hard olympiad mathematics. Starting from Nemotron 3 Ultra, we train two specialist checkpoints using supervised fine-tuning and reinforcement learning, and evaluate checkp...",
+      "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
+      "link": "https://huggingface.co/papers/2609.10539",
+      "summary": "A research idea may be novel, coherent, and scientifically plausible, yet its proposed method may remain insufficiently specified for faithful implementation. We study the codification readiness of implementation-facing research-method specifications, defined by whether they prov...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -24,9 +24,9 @@
       "signal_score": 4
     },
     {
-      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
-      "link": "https://huggingface.co/papers/2609.11929",
-      "summary": "We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface through spatially coherent patch reconstruction and scale its tra...",
+      "title": "FreeFlow: A Bias-free Hierarchical Transformer for Optical Flow Estimation",
+      "link": "https://huggingface.co/papers/2609.11486",
+      "summary": "Optical flow methods typically rely on task-specific inductive biases, such as correlation volumes, feature warping, and iterative refinement, among others, to reach high accuracy. While effective, such biases constrain the model to predefined heuristics, which can limit its expr...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -84,29 +84,19 @@
       "signal_score": 4
     },
     {
-      "title": "Generative Late-Interaction Embeddings For Visual Document Retrieval",
-      "link": "https://huggingface.co/papers/2609.11808",
-      "summary": "Late-interaction retrieval is the state-of-the-art for visual document search, but it pays for its accuracy in storage. Existing compression methods retain a subset or local average of the N~1,000 vectors per page. Under aggressive storage budgets, however, these methods degrade ...",
+      "title": "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models",
+      "link": "https://huggingface.co/papers/2609.09143",
+      "summary": "Image tokenizers define the ``visual language'' of unified multimodal models, yet are commonly studied through isolated metrics or generation-/understanding-only evaluations. These evaluations do not fully capture how visual tokens behave when modeled jointly with text. We build ...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-10",
+      "published_at": "2026-09-08",
       "signal_score": 3
     },
     {
-      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
-      "link": "https://huggingface.co/papers/2609.05903",
-      "summary": "Large Language Model (LLM) agents are turning language into real-world effects, making safety necessary against both indirect prompt injections and direct harmful requests. System-level safety harnesses add an enforcement layer beyond model-level defenses, but existing harnesses ...",
-      "source": "Hugging Face Papers",
-      "category": "Foundation Models & Inference",
-      "domain": "huggingface.co",
-      "published_at": "2026-09-05",
-      "signal_score": 3
-    },
-    {
-      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
-      "link": "https://huggingface.co/papers/2609.10715",
-      "summary": "We introduce NCP-ArchPreview, a latent-space language model that pushes autoregressive pretraining beyond standard next-token prediction (NTP). Alongside NTP, the model learns through Next Concept Prediction (NCP) to predict discrete concepts that span multiple tokens, introducin...",
+      "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+      "link": "https://huggingface.co/papers/2609.10745",
+      "summary": "Multimodal entity linking grounds entity mentions in text and images to knowledge-base entries. These systems degrade on rare entities, but prior work measures rarity primarily through popularity-based metrics such as pageviews. We broaden this view using knowledge-graph structur...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -114,19 +104,19 @@
       "signal_score": 3
     },
     {
-      "title": "SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem",
-      "link": "https://huggingface.co/papers/2609.07064",
-      "summary": "Large Vision-Language Models (LVLMs) have achieved strong performance on diverse visual tasks, yet their ability to reconstruct and reason about the 3D structure of the scene depicted in 2D images -- referred to as spatial intelligence -- remains limited. Existing approaches atte...",
+      "title": "Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning",
+      "link": "https://huggingface.co/papers/2609.10445",
+      "summary": "Reasoning language models have made substantial advances on a variety of complex tasks, yet their capabilities remain overwhelmingly English-centric: models primarily reason in English regardless of the language they are prompted in. This is inaccessible for non-English-speaking ...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-07",
+      "published_at": "2026-09-09",
       "signal_score": 3
     },
     {
-      "title": "Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs",
-      "link": "https://huggingface.co/papers/2609.11499",
-      "summary": "Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framework for reconstructing complex 3D worlds in code from a single reference image. R...",
+      "title": "Beyond Solver Verdicts: Generative Reward Models for Autoformalization",
+      "link": "https://huggingface.co/papers/2609.11085",
+      "summary": "Neurosymbolic systems rely on mathematical solvers to guarantee reasoning correctness, yet solvers are fundamentally blind to whether a formal translation maintains strict reference-equivalence to a designated formalization. We formalize this vulnerability as Verdict-Preserving-U...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -134,9 +124,19 @@
       "signal_score": 3
     },
     {
-      "title": "World in World: Explore the World with World Models",
-      "link": "https://huggingface.co/papers/2609.11548",
-      "summary": "Autoregressive video world models enable interactive, long-horizon exploration, but flexible control remains challenging. Exploring a source video from new viewpoints requires the generated rollout to remain synchronised with the recorded event, place observed content in the requ...",
+      "title": "ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation",
+      "link": "https://huggingface.co/papers/2609.09076",
+      "summary": "As LLMs are increasingly used for pre-submission self-review, there is growing demand for feedback that not only identifies weaknesses but also guides authors toward concrete revisions. We study this as Actionable Peer-review Generation and decompose it into two subtasks: diagnos...",
+      "source": "Hugging Face Papers",
+      "category": "Foundation Models & Inference",
+      "domain": "huggingface.co",
+      "published_at": "2026-09-08",
+      "signal_score": 3
+    },
+    {
+      "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+      "link": "https://huggingface.co/papers/2609.11561",
+      "summary": "Mainstream robotic policies often adopt a Markovian formulation, but many complex real-world manipulation tasks are inherently non-Markovian, requiring long-horizon memory beyond the current observation. Existing memory mechanisms often rely on language summaries, growing visual ...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -144,13 +144,13 @@
       "signal_score": 3
     },
     {
-      "title": "CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation",
-      "link": "https://huggingface.co/papers/2609.06931",
-      "summary": "Invasive coronary angiography (CAG) is the gold standard for diagnosing coronary artery disease, but interpretation varies substantially among observers. Existing AI systems can improve consistency but lack auditable decision processes and are limited in comprehensive open-ended ...",
+      "title": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
+      "link": "https://huggingface.co/papers/2609.11699",
+      "summary": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions. However, recent findings indicate that OPSD can ...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-07",
+      "published_at": "2026-09-10",
       "signal_score": 3
     },
     {
