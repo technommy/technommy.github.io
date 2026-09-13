@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-12",
-  "updated_at": "2026-09-12 09:52 UTC",
-  "count": 18,
+  "date": "2026-09-13",
+  "updated_at": "2026-09-13 10:52 UTC",
+  "count": 16,
   "items": [
     {
       "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
@@ -30,56 +30,6 @@
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-10",
-      "signal_score": 4
-    },
-    {
-      "title": "GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay",
-      "link": "http://arxiv.org/abs/2609.11923v1",
-      "summary": "Counterfactual regret minimization (CFR) is one of the few large numerical workloads that still runs faster on CPUs than on GPUs. Each iteration sweeps a game tree with up to billions of states in millions of small, interdependent gather and scatter steps issued through a generic...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
-      "signal_score": 4
-    },
-    {
-      "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data",
-      "link": "http://arxiv.org/abs/2609.11917v1",
-      "summary": "As the supply of human-written text is exhausted, it has become standard practice to repeat language model training data. Prior work has studied data repetition for densely activated Transformers, but the effects of data repetition remains largely unexplored for recently dominant...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
-      "signal_score": 4
-    },
-    {
-      "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact",
-      "link": "http://arxiv.org/abs/2609.11915v1",
-      "summary": "Generative artificial intelligence changes how firms reach customers, but standard marketing data do not record how often users see and notice a firm's name in generated answers. We develop Generative Marketing Mix Modeling (GMMM) to estimate the causal effects of Generative Engi...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
-      "signal_score": 4
-    },
-    {
-      "title": "CausalArena: Benchmarking Causal Discovery in the Foundation Model Era",
-      "link": "http://arxiv.org/abs/2609.11897v1",
-      "summary": "Causal discovery aims to uncover causal structures from data and is fundamental to scientific reasoning and intervention-based decision making. Its evaluation relies heavily on structural causal models (SCMs), which specify a causal graph together with the mechanisms that generat...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
-      "signal_score": 4
-    },
-    {
-      "title": "CoRA-NAS: Coarse Ranking and Anchor-Residual Refinement for Neural Architecture Search",
-      "link": "http://arxiv.org/abs/2609.11884v1",
-      "summary": "Zero-cost proxies rank architectures cheaply, but their reliability varies across search spaces. We introduce CoRA-NAS (COarse Ranking + Anchor-residual), a two-stage framework combining a static ranking prior with low-cost learning-curve refinement. CoRA-Rank aggregates capacity...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
       "published_at": "2026-09-10",
       "signal_score": 4
     },
@@ -154,33 +104,63 @@
       "signal_score": 3
     },
     {
-      "title": "General Quantification of Covariate and Concept Shifts",
-      "link": "http://arxiv.org/abs/2609.11918v1",
-      "summary": "Generalization under distribution shift remains a core challenge in modern machine learning, yet existing learning bound theory is limited to narrow, idealized settings and is non-estimable from samples. In this paper, we bridge the gap between theory and practical applications. ...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "link": "https://withspecific.com/benchmarks/real-swe",
+      "summary": "Discussion on Hacker News with 246 points and 136 comments focusing on developer compute economics and engineering tradeoffs.",
+      "source": "Hacker News",
+      "category": "Industry Discussion",
+      "domain": "withspecific.com",
+      "published_at": "2026-09-12",
       "signal_score": 3
     },
     {
-      "title": "Can Edge-Deployable Vision-Language Models Identify Species?",
-      "link": "http://arxiv.org/abs/2609.11916v1",
-      "summary": "Camera traps often run in the field on edge hardware with limited or no connectivity, making small, locally-deployable vision-language models (VLMs) -- not frontier-scale ones -- the practically relevant class to evaluate for species identification. We test whether models in this...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
+      "title": "Benchmark: CadQuery vs. OpenSCAD for agentic CAD work",
+      "link": "https://modelrift.com/blog/cadquery-vs-openscad",
+      "summary": "Discussion on Hacker News with 36 points and 50 comments focusing on developer compute economics and engineering tradeoffs.",
+      "source": "Hacker News",
+      "category": "Industry Discussion",
+      "domain": "modelrift.com",
+      "published_at": "2026-09-12",
       "signal_score": 3
     },
     {
-      "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
-      "link": "http://arxiv.org/abs/2609.11911v1",
-      "summary": "Agentic AI is moving from bounded task execution toward systems that retain consequential state, continue operating and adapt across task boundaries. That shift creates a control problem that current harnesses largely solve by hand: objectives, retries, verification, stopping rul...",
-      "source": "ArXiv Research",
-      "category": "Preprint & Systems Paper",
-      "domain": "arxiv.org",
-      "published_at": "2026-09-10",
+      "title": "Introducing automatic remediation policies with Cloudflare CASB",
+      "link": "https://blog.cloudflare.com/casb-policies",
+      "summary": "Cloudflare CASB policies introduce a native automation engine built directly on the Cloudflare developer platform to remediate SaaS risks automatically. Security teams can now design event-driven logic to revoke risky file shares and send webhooks without manual intervention.",
+      "source": "Cloudflare Engineering",
+      "category": "Edge & Distributed Systems",
+      "domain": "blog.cloudflare.com",
+      "published_at": "Fri, 11 Sep 2026",
+      "signal_score": 3
+    },
+    {
+      "title": "1.1.1.1 now supports post-quantum DNSSEC, all 2,420 bytes of it",
+      "link": "https://blog.cloudflare.com/post-quantum-dnssec-1111",
+      "summary": "1.1.1.1 now validates DNSSEC signatures using NIST\u2019s post-quantum ML-DSA-44 algorithm. Here is how we manage 2,420-byte signatures and downgrade risks at scale.",
+      "source": "Cloudflare Engineering",
+      "category": "Edge & Distributed Systems",
+      "domain": "blog.cloudflare.com",
+      "published_at": "Thu, 10 Sep 2026",
+      "signal_score": 3
+    },
+    {
+      "title": "How we rebuilt Cloudflare Workers\u2019 module registry for Node.js compatibility",
+      "link": "https://blog.cloudflare.com/workers-module-registry-nodejs",
+      "summary": "Workers now enables Node.js compatibility by default, supports applications up to 64 mebibytes, and adds a URL-based module registry with import.meta, lazy compilation, shared code caches, and clearer errors.",
+      "source": "Cloudflare Engineering",
+      "category": "Edge & Distributed Systems",
+      "domain": "blog.cloudflare.com",
+      "published_at": "Wed, 09 Sep 2026",
+      "signal_score": 3
+    },
+    {
+      "title": "Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)",
+      "link": "https://blog.cloudflare.com/automatic-key-exchange-for-origins",
+      "summary": "Automatic Key Exchange probes TLS 1.3-capable customer origins to learn which key agreement algorithms they support. We then lead with the most secure algorithm when connecting to the origin, preferring post-quantum connections wherever the origin supports it.",
+      "source": "Cloudflare Engineering",
+      "category": "Edge & Distributed Systems",
+      "domain": "blog.cloudflare.com",
+      "published_at": "Tue, 08 Sep 2026",
       "signal_score": 3
     }
   ]
