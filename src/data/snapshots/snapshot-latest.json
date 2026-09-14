@@ -1,32 +1,12 @@
 {
-  "date": "2026-09-13",
-  "updated_at": "2026-09-13 10:52 UTC",
-  "count": 16,
+  "date": "2026-09-14",
+  "updated_at": "2026-09-14 11:22 UTC",
+  "count": 15,
   "items": [
     {
-      "title": "Adaptive Bridge: A Proxy-Based Decoupling Layer for Mitigating DDS Backpressure in ROS 2",
-      "link": "https://huggingface.co/papers/2608.15380",
-      "summary": "In systems built on Robot Operating System 2 (ROS 2) and using Data Distribution Service (DDS), a single network-impaired or throttled subscriber on a RELIABLE topic can cause backpressure that degrades throughput and latency for all other subscribers, including safety-critical o...",
-      "source": "Hugging Face Papers",
-      "category": "Foundation Models & Inference",
-      "domain": "huggingface.co",
-      "published_at": "2026-09-06",
-      "signal_score": 5
-    },
-    {
-      "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
-      "link": "https://huggingface.co/papers/2609.10539",
-      "summary": "A research idea may be novel, coherent, and scientifically plausible, yet its proposed method may remain insufficiently specified for faithful implementation. We study the codification readiness of implementation-facing research-method specifications, defined by whether they prov...",
-      "source": "Hugging Face Papers",
-      "category": "Foundation Models & Inference",
-      "domain": "huggingface.co",
-      "published_at": "2026-09-09",
-      "signal_score": 4
-    },
-    {
-      "title": "FreeFlow: A Bias-free Hierarchical Transformer for Optical Flow Estimation",
-      "link": "https://huggingface.co/papers/2609.11486",
-      "summary": "Optical flow methods typically rely on task-specific inductive biases, such as correlation volumes, feature warping, and iterative refinement, among others, to reach high accuracy. While effective, such biases constrain the model to predefined heuristics, which can limit its expr...",
+      "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
+      "link": "https://huggingface.co/papers/2609.11115",
+      "summary": "Benchmark researchers and developers of large language models (LLMs) and other AI systems need to find relevant evaluations, locate their benchmark datasets and code, and understand the settings behind reported scores. We present Benchmark Radar, a living database and search engi...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -34,9 +14,59 @@
       "signal_score": 4
     },
     {
-      "title": "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models",
-      "link": "https://huggingface.co/papers/2609.09143",
-      "summary": "Image tokenizers define the ``visual language'' of unified multimodal models, yet are commonly studied through isolated metrics or generation-/understanding-only evaluations. These evaluations do not fully capture how visual tokens behave when modeled jointly with text. We build ...",
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "link": "https://huggingface.co/papers/2609.13141",
+      "summary": "Post-training attention sparsification reduces the quadratic cumulative attention cost of pretrained Transformers by selecting a small set of context units (tokens or blocks) for each query. Existing trainable methods usually use a lightweight selector to score context units, fol...",
+      "source": "Hugging Face Papers",
+      "category": "Foundation Models & Inference",
+      "domain": "huggingface.co",
+      "published_at": "2026-09-11",
+      "signal_score": 4
+    },
+    {
+      "title": "OpenArch \u2013 PyTorch implementations of modern LLM architectures",
+      "link": "https://github.com/anuj0456/OpenArch",
+      "summary": "Discussion on Hacker News with 36 points and 5 comments focusing on developer compute economics and engineering tradeoffs.",
+      "source": "Hacker News",
+      "category": "Industry Discussion",
+      "domain": "github.com",
+      "published_at": "2026-09-14",
+      "signal_score": 4
+    },
+    {
+      "title": "Beyond Top-k Skill Retrieval: Diversity-Aware Skill Routing for LLM Agents",
+      "link": "https://huggingface.co/papers/2609.05824",
+      "summary": "Large language model (LLM) agents increasingly rely on external skills, but routing user requests over large skill registries is difficult because many skills are functionally redundant while complex tasks often require complementary skill sets. Existing skill routers typically r...",
+      "source": "Hugging Face Papers",
+      "category": "Foundation Models & Inference",
+      "domain": "huggingface.co",
+      "published_at": "2026-09-05",
+      "signal_score": 3
+    },
+    {
+      "title": "Online Learning with LLM Experts from Limited Feedback",
+      "link": "https://huggingface.co/papers/2609.05820",
+      "summary": "We study adaptive routing of prompts to large language model (LLM) experts to maximize response quality in an online setting with limited feedback. We formulate it as a bandit problem with K actions that represent experts and d features that encode prompts, over a horizon of T ro...",
+      "source": "Hugging Face Papers",
+      "category": "Foundation Models & Inference",
+      "domain": "huggingface.co",
+      "published_at": "2026-09-05",
+      "signal_score": 3
+    },
+    {
+      "title": "StepAudio 3 Gen Technical Report",
+      "link": "https://huggingface.co/papers/2609.12945",
+      "summary": "We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of multiple audio types within a unified framework. At its core, StepAudio 3 Gen is...",
+      "source": "Hugging Face Papers",
+      "category": "Foundation Models & Inference",
+      "domain": "huggingface.co",
+      "published_at": "2026-09-11",
+      "signal_score": 3
+    },
+    {
+      "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+      "link": "https://huggingface.co/papers/2609.08418",
+      "summary": "Training capable cyber agents is often treated primarily as a problem of model scale, yet open-weight post-training is constrained more directly by the cost of executable environments, reliable multi-turn supervision, and access to strong teachers. We present a data-centric frame...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -44,29 +74,19 @@
       "signal_score": 3
     },
     {
-      "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
-      "link": "https://huggingface.co/papers/2609.10745",
-      "summary": "Multimodal entity linking grounds entity mentions in text and images to knowledge-base entries. These systems degrade on rare entities, but prior work measures rarity primarily through popularity-based metrics such as pageviews. We broaden this view using knowledge-graph structur...",
+      "title": "Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models",
+      "link": "https://huggingface.co/papers/2609.12641",
+      "summary": "Robot foundation models achieve strong in-distribution performance but often degrade under visual distribution shifts. When learning to generate actions from pretrained visual representations, models may exploit task-irrelevant visual cues that correlate with demonstrated actions...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-09",
+      "published_at": "2026-09-11",
       "signal_score": 3
     },
     {
-      "title": "Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning",
-      "link": "https://huggingface.co/papers/2609.10445",
-      "summary": "Reasoning language models have made substantial advances on a variety of complex tasks, yet their capabilities remain overwhelmingly English-centric: models primarily reason in English regardless of the language they are prompted in. This is inaccessible for non-English-speaking ...",
-      "source": "Hugging Face Papers",
-      "category": "Foundation Models & Inference",
-      "domain": "huggingface.co",
-      "published_at": "2026-09-09",
-      "signal_score": 3
-    },
-    {
-      "title": "Beyond Solver Verdicts: Generative Reward Models for Autoformalization",
-      "link": "https://huggingface.co/papers/2609.11085",
-      "summary": "Neurosymbolic systems rely on mathematical solvers to guarantee reasoning correctness, yet solvers are fundamentally blind to whether a formal translation maintains strict reference-equivalence to a designated formalization. We formalize this vulnerability as Verdict-Preserving-U...",
+      "title": "COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization",
+      "link": "https://huggingface.co/papers/2609.11682",
+      "summary": "Large language model (LLM) agents can benefit from reusable skills distilled from prior task experience, yet existing skill optimization methods often rely on costly execution-based evaluation and substantial task data. We introduce COBRA-Skills, an efficient framework that formu...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
@@ -74,53 +94,23 @@
       "signal_score": 3
     },
     {
-      "title": "ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation",
-      "link": "https://huggingface.co/papers/2609.09076",
-      "summary": "As LLMs are increasingly used for pre-submission self-review, there is growing demand for feedback that not only identifies weaknesses but also guides authors toward concrete revisions. We study this as Actionable Peer-review Generation and decompose it into two subtasks: diagnos...",
+      "title": "PLC-DPO: Posterior Label Correction in Noisy and Ambiguous Preference Optimization",
+      "link": "https://huggingface.co/papers/2608.30597",
+      "summary": "Direct Preference Optimization (DPO) simplifies alignment through pairwise comparisons but assumes all observed preferences are reliable. Real data often violates this assumption, leading to reversed, weak, or ambiguous labels that cause harmful policy updates. To address this, w...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-08",
+      "published_at": "2026-08-31",
       "signal_score": 3
     },
     {
-      "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
-      "link": "https://huggingface.co/papers/2609.11561",
-      "summary": "Mainstream robotic policies often adopt a Markovian formulation, but many complex real-world manipulation tasks are inherently non-Markovian, requiring long-horizon memory beyond the current observation. Existing memory mechanisms often rely on language summaries, growing visual ...",
+      "title": "SNAP3D: Physically Grounded 3D Parts for Assembly from a Single Image",
+      "link": "https://huggingface.co/papers/2609.13146",
+      "summary": "Part-aware 3D asset generation enables applications such as editing, articulation, simulation, and fabrication, yet existing methods can generate visually complete individual parts without ensuring that they form a valid physical assembly. Consequently, generated neighboring part...",
       "source": "Hugging Face Papers",
       "category": "Foundation Models & Inference",
       "domain": "huggingface.co",
-      "published_at": "2026-09-10",
-      "signal_score": 3
-    },
-    {
-      "title": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
-      "link": "https://huggingface.co/papers/2609.11699",
-      "summary": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions. However, recent findings indicate that OPSD can ...",
-      "source": "Hugging Face Papers",
-      "category": "Foundation Models & Inference",
-      "domain": "huggingface.co",
-      "published_at": "2026-09-10",
-      "signal_score": 3
-    },
-    {
-      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-      "link": "https://withspecific.com/benchmarks/real-swe",
-      "summary": "Discussion on Hacker News with 246 points and 136 comments focusing on developer compute economics and engineering tradeoffs.",
-      "source": "Hacker News",
-      "category": "Industry Discussion",
-      "domain": "withspecific.com",
-      "published_at": "2026-09-12",
-      "signal_score": 3
-    },
-    {
-      "title": "Benchmark: CadQuery vs. OpenSCAD for agentic CAD work",
-      "link": "https://modelrift.com/blog/cadquery-vs-openscad",
-      "summary": "Discussion on Hacker News with 36 points and 50 comments focusing on developer compute economics and engineering tradeoffs.",
-      "source": "Hacker News",
-      "category": "Industry Discussion",
-      "domain": "modelrift.com",
-      "published_at": "2026-09-12",
+      "published_at": "2026-09-11",
       "signal_score": 3
     },
     {
